@@ -1,9 +1,9 @@
-import webpack from 'webpack';
-import path from 'path';
+import webpack from 'webpack'
+import path from 'path'
 
 export default {
   debug: true,
-  devtool: 'inline-source-map',
+  devtool: 'cheap-module-eval-source-map', //'inline-source-map',
   noInfo: false,
   entry: [
     'eventsource-polyfill', // necessary for hot reloading with IE
@@ -33,4 +33,4 @@ export default {
       {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'}
     ]
   }
-};
+}
