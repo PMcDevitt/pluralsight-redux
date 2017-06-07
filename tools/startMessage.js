@@ -1,3 +1,4 @@
+'use strict'
 import chalk from 'chalk'
 
 /* eslint-disable no-console */

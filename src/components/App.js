@@ -1,5 +1,4 @@
-"use strict"
-
+'use strict'
 import React, {PropTypes} from 'react'
 import Header from './common/Header'
 
