@@ -1,5 +1,6 @@
 'use strict'
 export default {
   authors: [],
-  courses: []
+  courses: [],
+  ajaxCallsInProgress: 0
 }
