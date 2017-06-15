@@ -1,15 +1,13 @@
 {
   "extends": [
-    "eslint:recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings"
+    "standard",
+    "standard-react"
   ],
   "plugins": [
-    "standard",
     "react"
   ],
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 7,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
@@ -23,17 +21,9 @@
     "mocha": true
   },
   "rules": {
-    "quotes": 0,
     "no-console": 1,
     "no-debugger": 1,
     "no-var": 1,
-    "no-trailing-spaces": 0,
-    "eol-last": 0,
-    "no-unused-vars": 0,
-    "no-underscore-dangle": 0,
-    "no-alert": 0,
-    "no-lone-blocks": 0,
-    "jsx-quotes": 1,
     "react/display-name": [ 1, {"ignoreTranspilerName": false }],
     "react/forbid-prop-types": [1, {"forbid": ["any"]}],
     "react/jsx-boolean-value": 1,

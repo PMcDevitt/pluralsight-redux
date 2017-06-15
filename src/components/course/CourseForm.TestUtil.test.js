@@ -15,7 +15,7 @@ function setup(saving) {
     onChange: () => {}
   }
   let renderer = TestUtils.createRenderer()
-  renderer.render(<CourseForm {...props}/>)
+  renderer.render(<CourseForm {...props} />)
   let output = renderer.getRenderOutput()
   return {
     props,

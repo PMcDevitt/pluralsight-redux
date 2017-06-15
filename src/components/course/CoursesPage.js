@@ -18,13 +18,13 @@ class CoursesPage extends React.Component{
 
   render(){
     const {courses} = this.props
-
+    this.props.actions
     return (
       <div>
         <h1>Courses</h1>
-        <input type="submit"
-               value="Add Course"
-               className="btn btn-primary"
+        <input type='submit'
+               value='Add Course'
+               className='btn btn-primary'
                onClick={this.redirectToAddCoursePage} />
         <CourseList courses={courses} />
       </div>
