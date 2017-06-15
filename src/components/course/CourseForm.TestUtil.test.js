@@ -5,8 +5,7 @@ import CourseForm from './CourseForm'
 
 import TestUtils from 'react-addons-test-utils'
 
-
-function setup(saving) {
+function setup (saving) {
   let props = {
     course: {},
     saving: saving,
@@ -29,20 +28,18 @@ describe('Test Utils: Given the CourseForm component ', () => {
     it('Then a form and h1 are present.', () => {
       const { output } = setup()
       expect(output.type).toBe('form')
-      let [h1]  = output.props.children
+      let [h1] = output.props.children
       expect(h1.type).toBe('h1')
     })
-    it('Save button is labeled "Save" when saving', () =>{
+    it('Save button is labeled "Save" when saving', () => {
       const {output} = setup(false)
       const submitButton = output.props.children[5]
       expect(submitButton.props.value).toBe('Save')
     })
-    it('Save button is labeled "Saving..." when not saving', () =>{
+    it('Save button is labeled "Saving..." when not saving', () => {
       const {output} = setup(true)
       const submitButton = output.props.children[5]
       expect(submitButton.props.value).toBe('Saving...')
     })
   })
 })
-
-

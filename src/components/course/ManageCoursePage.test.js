@@ -7,7 +7,7 @@ import {ManageCoursePage} from './ManageCoursePage'
 let props = {
   course: {id: '', watchHref: '', title: '', authorID: '', length: '', category: ''},
   authors: [],
-  actions: {saveCourse: () =>{return Promise.resolve()} }
+  actions: {saveCourse: () => { return Promise.resolve() } }
 }
 
 describe('Given the ManageCoursePage component ', () => {

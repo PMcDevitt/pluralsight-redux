@@ -6,26 +6,26 @@ import {browserHistory} from 'react-router'
 import * as courseActions from '../../actions/courseActions'
 import CourseList from './CourseList'
 
-class CoursesPage extends React.Component{
-  constructor(props, context) {
+class CoursesPage extends React.Component {
+  constructor (props, context) {
     super(props, context)
     this.redirectToAddCoursePage = this.redirectToAddCoursePage.bind(this)
   }
 
-  redirectToAddCoursePage() {
+  redirectToAddCoursePage () {
     browserHistory.push('/course')
   }
 
-  render(){
+  render () {
     const {courses} = this.props
     this.props.actions
     return (
       <div>
         <h1>Courses</h1>
         <input type='submit'
-               value='Add Course'
-               className='btn btn-primary'
-               onClick={this.redirectToAddCoursePage} />
+          value='Add Course'
+          className='btn btn-primary'
+          onClick={this.redirectToAddCoursePage} />
         <CourseList courses={courses} />
       </div>
     )
@@ -35,15 +35,15 @@ class CoursesPage extends React.Component{
 CoursesPage.propTypes = {
   courses: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired
-};
+}
 
-function mapStateToProps(state, ownProps){
+function mapStateToProps (state, ownProps) {
   return {
     courses: state.courses
   }
 }
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps (dispatch) {
   return {
     actions: bindActionCreators(courseActions, dispatch)
   }

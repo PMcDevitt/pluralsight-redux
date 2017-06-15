@@ -39,7 +39,7 @@ describe('Course Actions ', () => {
       ]
 
       const store = mockStore({courses: []}, expectedActions)
-      store.dispatch(courseActions.loadCourses()).then(() =>{
+      store.dispatch(courseActions.loadCourses()).then(() => {
         const actions = store.getActions()
         expect(actions[0].type).toEqual('BEGIN_AJAX_CALL')
         expect(actions[1].type).toEqual('LOAD_COURSES_SUCCESS')

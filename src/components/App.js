@@ -3,8 +3,8 @@ import React from 'react'
 import Header from './common/Header'
 import {connect} from 'react-redux'
 
-class App extends React.Component{
-  render(){
+class App extends React.Component {
+  render () {
     return (
       <div className='container-fluid'>
         <Header
@@ -18,10 +18,10 @@ class App extends React.Component{
 
 App.propTypes = {
   children: React.PropTypes.object.isRequired,
-  loading:  React.PropTypes.bool.isRequired
+  loading: React.PropTypes.bool.isRequired
 }
 
-function mapStateToProps(state, ownProps){
+function mapStateToProps (state, ownProps) {
   return {
     loading: state.ajaxCallsInProgress > 0
   }

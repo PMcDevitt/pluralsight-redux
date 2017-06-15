@@ -4,7 +4,7 @@ import expect from 'expect'
 import CourseForm from './CourseForm'
 import { mount, shallow } from 'enzyme'
 
-function setup(saving) {
+function setup (saving) {
   let props = {
     course: {},
     saving: saving,
@@ -32,4 +32,3 @@ describe('Enzyme: Given the CourseForm component', () => {
     })
   })
 })
-

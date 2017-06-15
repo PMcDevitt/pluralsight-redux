@@ -26,11 +26,11 @@ describe('Store', () => {
 
     expect(actual).toEqual(expected)
 
-    // const secondAction = courseActions.createCourseSuccess(course2)
-    // store.dispatch(action)
-    //
-    // const actual2 = store.getState().courses[1]
-    //
-    // expect(actual2).toEqual(course2)
+    const secondAction = courseActions.createCourseSuccess(course2)
+    store.dispatch(secondAction)
+    
+    const actual2 = store.getState().courses[1]
+    
+    expect(actual2).toEqual(course2)
   })
 })

@@ -1,5 +1,5 @@
 'use strict'
-export function authorsFormattedForDropdown(authors) {
+export function authorsFormattedForDropdown (authors) {
   return authors.map(author => {
     return {
       value: author.id,
